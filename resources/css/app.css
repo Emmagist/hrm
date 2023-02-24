@@ -1,0 +1,28 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.all_employee_table {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+  }
+    
+  table {
+    border: 1px solid rgb(64 64 64);
+  }
+    
+  th {
+    border-bottom: 1px solid rgb(64 64 64);
+    text-align:left;
+  }
+
+  tbody tr{
+    border-bottom: 1px solid rgb(64 64 64);
+  }
+    
+  
