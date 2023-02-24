@@ -1,4 +1,4 @@
-@import "@fortawesome/fontawesome-free/css/all.css";
+/* @import "@fortawesome/fontawesome-free/css/all.css";
 
 @tailwind base;
 @tailwind components;
@@ -25,4 +25,29 @@
     border-bottom: 1px solid rgb(64 64 64);
   }
     
-  
+   */
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: #556575; */
+}
+
+:root {
+    --primary-color: #425466;
+    --blue-color: #4c6fff;
+}
+
+body {
+    color: #425466;
+}
+
+.active {
+    /* background-color: #fbfbfb; */
+    border-left: 3px solid var(--blue-color);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    color: var(--blue-color) !important;
+}
