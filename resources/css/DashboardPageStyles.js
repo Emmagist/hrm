@@ -8,10 +8,15 @@ export const DashboardPageView = styled.div`
 
 export const DashboardView = styled.main`
     width: 80%;
+    overflow: scroll;
+    height: calc(100vh - 2rem);
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     .DashboardContentView {
         background-color: #f7fafc;
-        /* height: calc(100vh - 2rem); */
     }
 `;
 
@@ -134,7 +139,10 @@ export const DashboardGraphView = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    /* gap: 0.3rem; */
+
+    h4 {
+        margin-bottom: 1rem;
+    }
 
     .staff_graph {
         width: 50%;
@@ -148,5 +156,8 @@ export const DashboardGraphView = styled.div`
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 2rem;
         margin: 1rem;
+    }
+
+    .mail_box {
     }
 `;

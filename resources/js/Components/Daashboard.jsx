@@ -14,6 +14,7 @@ import {
     DashboardGraphView,
 } from "../../css/DashboardPageStyles";
 import AttendanceChart from "./AttendanceChart";
+import MailBox from "./MailBox";
 import ApexChart from "./StaffChart";
 // import StaffChart from "./StaffChart";
 
@@ -53,6 +54,15 @@ const Daashboard = () => {
                     </div>
                 </DashboardGraphView>
             </div>
+            <DashboardGraphView>
+                <div className="staff_graph mail_box">
+                    <h4>Mailbox</h4>
+                    <MailBox />
+                </div>
+                <div className="staff_graph">
+                    <MailBox />
+                </div>
+            </DashboardGraphView>
         </DashboardView>
     );
 };
