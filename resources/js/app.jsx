@@ -1,20 +1,13 @@
-// import './bootstrap';
 import "../css/app.css";
-
-// import { createRoot } from 'react-dom/client';
-// import { createInertiaApp } from '@inertiajs/react';
-// import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
-
-// const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
 import React from "react";
 import ReactDOM from "react-dom";
-import SideBar from "./Components/SideBar";
+import DashboardPage from "./Pages/DashboardPage";
 
 function Example() {
     return (
         <div>
-            <SideBar />
+            <DashboardPage />
         </div>
     );
 }

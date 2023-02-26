@@ -44,6 +44,10 @@ body {
     color: #425466;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .active {
     /* background-color: #fbfbfb; */
     border-left: 3px solid var(--blue-color);
