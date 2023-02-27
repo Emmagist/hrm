@@ -14,17 +14,19 @@ export const DashboardView = styled.main`
     &::-webkit-scrollbar {
         display: none;
     }
-
-    .DashboardContentView {
-        background-color: #f7fafc;
-    }
 `;
 
 export const DashboardNavView = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 
     &::-webkit-scrollbar {
         display: none;
@@ -62,7 +64,7 @@ export const DashboardEmployeesView = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
     margin: 1rem 2rem;
     border-radius: 10px;
     background-color: var(--blue-color);
@@ -127,11 +129,18 @@ export const DashboardEmployeesView = styled.div`
 
 export const EmployeesView = styled.div`
     p {
-        padding: 17px 15px;
+        padding: 15px 13px;
         border-radius: 10px;
         background-color: white;
         font-weight: bolder;
         cursor: pointer;
+        font-size: 13px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
     }
 `;
 
@@ -139,25 +148,78 @@ export const DashboardGraphView = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1.2rem;
+    margin: 2rem;
 
     h4 {
         margin-bottom: 1rem;
     }
 
     .staff_graph {
-        width: 50%;
+        /* width: 50%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 2rem;
-        margin: 1rem 2rem;
+        background-color: white;
+        border-radius: 5px; */
     }
 
     .attendance_graph {
         width: 50%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 2rem;
-        margin: 1rem;
+        background-color: white;
+        border-radius: 5px;
+    }
+`;
+
+export const DashboardEventView = styled.article`
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-content: center;
+
+    .application_content {
+        margin: 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        border-radius: 5px;
+        max-height: 335px;
+        width: 50%;
+
+        h4 {
+            margin-bottom: 1rem;
+        }
     }
 
-    .mail_box {
+    .event_content {
+        padding: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        border-radius: 5px;
+        width: 49%;
+        height: 335px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .mailbox_content {
+        h4 {
+            margin-bottom: 1rem;
+        }
+
+        padding: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        border-radius: 5px;
+        overflow-y: hidden;
+        width: 49%;
     }
 `;

@@ -12,8 +12,11 @@ import {
     EmployeesView,
     DashboardEmployeesView,
     DashboardGraphView,
+    DashboardEventView,
 } from "../../css/DashboardPageStyles";
+import Application from "./Application";
 import AttendanceChart from "./AttendanceChart";
+import EventComponent from "./Events";
 import MailBox from "./MailBox";
 import ApexChart from "./StaffChart";
 // import StaffChart from "./StaffChart";
@@ -25,17 +28,17 @@ const Daashboard = () => {
                 <h1>Dashboard</h1>
                 <DashboardInputView>
                     <input type="text" name="" id="" placeholder="Search" />
-                    <i class="uil uil-search"></i>
+                    <i className="uil uil-search"></i>
                 </DashboardInputView>
             </DashboardNavView>
             <div className="DashboardContentView">
                 <DashboardEmployeesView>
                     <div className="dashboard_employees">
-                        <img src={img1} alt="" srcset="" />
-                        <img src={img2} alt="" srcset="" />
-                        <img src={img3} alt="" srcset="" />
-                        <img src={img4} alt="" srcset="" />
-                        <img src={img5} alt="" srcset="" />
+                        <img src={img1} />
+                        <img src={img2} />
+                        <img src={img3} />
+                        <img src={img4} />
+                        <img src={img5} />
                         <span>45+</span>
                     </div>
                     <EmployeesView>
@@ -43,9 +46,8 @@ const Daashboard = () => {
                     </EmployeesView>
                 </DashboardEmployeesView>
                 <DashboardGraphView>
-                    <div className="staff_graph">
+                    <div className="attendance_graph">
                         <h4>Staff Performance</h4>
-                        {/* <StaffChart /> */}
                         <ApexChart />
                     </div>
                     <div className="attendance_graph">
@@ -53,16 +55,22 @@ const Daashboard = () => {
                         <AttendanceChart />
                     </div>
                 </DashboardGraphView>
+                <DashboardEventView>
+                    <div className="mailbox_content">
+                        <h4>Mailbox</h4>
+                        <MailBox />
+                    </div>
+                    <div className="event_content">
+                        <EventComponent />
+                    </div>
+                    <div className="application_content">
+                        <h4>Application</h4>
+                        <Application />
+                        <Application />
+                        <Application />
+                    </div>
+                </DashboardEventView>
             </div>
-            <DashboardGraphView>
-                <div className="staff_graph mail_box">
-                    <h4>Mailbox</h4>
-                    <MailBox />
-                </div>
-                <div className="staff_graph">
-                    <MailBox />
-                </div>
-            </DashboardGraphView>
         </DashboardView>
     );
 };

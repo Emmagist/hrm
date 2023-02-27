@@ -1,13 +1,20 @@
 import React, { useState } from "react";
-import { Tab, TabButton, TabContent } from "../../css/MailboxStyles";
+import {
+    Tab,
+    TabButton,
+    TabContent,
+    InboxTabView,
+} from "../../css/MailboxStyles";
 import MailboxContent from "./MailboxContent";
 
 const InboxTabContent = () => {
     return (
-        <>
+        <InboxTabView>
             <MailboxContent />
             <MailboxContent />
-        </>
+            <MailboxContent />
+            <MailboxContent />
+        </InboxTabView>
     );
 };
 
