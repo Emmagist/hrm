@@ -105,6 +105,11 @@ export const DashboardEmployeesView = styled.div`
     border-radius: 10px;
     background-color: var(--blue-color);
 
+    @media (min-width: 320px) and (max-width: 767px) {
+        padding: 1.5rem 1rem;
+        margin: 1rem;
+    }
+
     .dashboard_employees {
         display: flex;
         align-items: center;
@@ -124,6 +129,14 @@ export const DashboardEmployeesView = styled.div`
             border: 3px solid white;
             border-radius: 9999px;
             width: 3.2rem;
+
+            @media (min-width: 320px) and (max-width: 389px) {
+                left: 20px;
+            }
+
+            @media (min-width: 390px) and (max-width: 428px) {
+                left: 25px;
+            }
         }
         img:nth-child(3) {
             position: absolute;
@@ -131,6 +144,14 @@ export const DashboardEmployeesView = styled.div`
             border: 3px solid white;
             border-radius: 9999px;
             width: 3.2rem;
+
+            @media (min-width: 320px) and (max-width: 389px) {
+                left: 40px;
+            }
+
+            @media (min-width: 390px) and (max-width: 428px) {
+                left: 50px;
+            }
         }
         img:nth-child(4) {
             position: absolute;
@@ -138,6 +159,14 @@ export const DashboardEmployeesView = styled.div`
             border: 3px solid white;
             border-radius: 9999px;
             width: 3.2rem;
+
+            @media (min-width: 320px) and (max-width: 389px) {
+                left: 60px;
+            }
+
+            @media (min-width: 390px) and (max-width: 428px) {
+                left: 80px;
+            }
         }
         img:nth-child(5) {
             position: absolute;
@@ -145,6 +174,15 @@ export const DashboardEmployeesView = styled.div`
             border: 3px solid white;
             border-radius: 9999px;
             width: 3.2rem;
+
+            @media (min-width: 320px) and (max-width: 389px) {
+                left: 80px;
+                display: none;
+            }
+
+            @media (min-width: 390px) and (max-width: 428px) {
+                left: 110px;
+            }
         }
         span {
             position: absolute;
@@ -158,6 +196,14 @@ export const DashboardEmployeesView = styled.div`
             justify-content: center;
             align-items: center;
             font-weight: bold;
+
+            @media (min-width: 320px) and (max-width: 389px) {
+                left: 80px;
+            }
+
+            @media (min-width: 390px) and (max-width: 428px) {
+                left: 140px;
+            }
         }
     }
 `;
@@ -171,6 +217,16 @@ export const EmployeesView = styled.div`
         cursor: pointer;
         font-size: 13px;
         transition: all 0.2s ease-in-out;
+
+        @media (min-width: 320px) and (max-width: 389px) {
+            padding: 12px 8px;
+            font-size: 11px;
+        }
+
+        @media (min-width: 390px) and (max-width: 428px) {
+            padding: 12px 8px;
+            font-size: 11px;
+        }
 
         &:hover {
             transform: translateY(-2px);
@@ -186,16 +242,12 @@ export const DashboardGraphView = styled.div`
     gap: 1.2rem;
     margin: 2rem;
 
-    h4 {
-        margin-bottom: 1rem;
+    @media (min-width: 320px) and (max-width: 767px) {
+        flex-direction: column;
     }
 
-    .staff_graph {
-        /* width: 50%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 2rem;
-        background-color: white;
-        border-radius: 5px; */
+    h4 {
+        margin-bottom: 1rem;
     }
 
     .attendance_graph {
@@ -204,6 +256,10 @@ export const DashboardGraphView = styled.div`
         padding: 2rem;
         background-color: white;
         border-radius: 5px;
+        @media (min-width: 320px) and (max-width: 767px) {
+            width: 100%;
+            padding: 1rem;
+        }
     }
 `;
 
@@ -213,8 +269,11 @@ export const DashboardEventView = styled.article`
     justify-content: space-between;
     margin: 2rem;
     gap: 1rem;
-    flex-wrap: wrap;
     align-content: center;
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        flex-direction: column;
+    }
 
     .application_content {
         flex: 1;
@@ -263,6 +322,10 @@ export const DashboardEventView = styled.article`
 
 export const MobileNavbar = styled.nav`
     display: none;
+
+    .uil-bars {
+        cursor: pointer;
+    }
 
     @media screen and (max-width: 884px) {
         display: block;

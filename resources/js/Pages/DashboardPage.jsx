@@ -10,7 +10,7 @@ const DashboardPage = () => {
         <DashboardPageView>
             <MobileNavbar>
                 <img src="" alt="Logo" />
-                <div>Menu</div>
+                <i className="uil uil-bars"></i>
             </MobileNavbar>
             <SideBar />
             <Daashboard />

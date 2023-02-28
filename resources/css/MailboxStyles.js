@@ -94,6 +94,10 @@ export const MailboxContentView = styled.article`
             max-width: 400px;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
+
+            @media (min-width: 320px) and (max-width: 767px) {
+                max-width: 250px;
+            }
         }
     }
 `;
