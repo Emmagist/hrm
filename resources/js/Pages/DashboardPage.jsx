@@ -1,13 +1,17 @@
 import Daashboard from "@/Components/Daashboard";
 import SideBar from "@/Components/SideBar";
 
-import { DashboardPageView } from "../../css/DashboardPageStyles";
+import { DashboardPageView, MobileNavbar } from "../../css/DashboardPageStyles";
 
 import React from "react";
 
 const DashboardPage = () => {
     return (
         <DashboardPageView>
+            <MobileNavbar>
+                <img src="" alt="Logo" />
+                <div>Menu</div>
+            </MobileNavbar>
             <SideBar />
             <Daashboard />
         </DashboardPageView>

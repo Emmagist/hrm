@@ -19,7 +19,6 @@ import AttendanceChart from "./AttendanceChart";
 import EventComponent from "./Events";
 import MailBox from "./MailBox";
 import ApexChart from "./StaffChart";
-// import StaffChart from "./StaffChart";
 
 const Daashboard = () => {
     return (

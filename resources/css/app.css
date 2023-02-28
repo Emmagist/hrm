@@ -28,13 +28,15 @@ body::-webkit-scrollbar {
 
 .DashboardContentView {
     background-color: #f7fafc;
+    padding-bottom: 1rem;
 }
 
 .appliation_view {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 1.3rem;
+    gap: 1rem;
+    font-size: 13px;
     margin-bottom: 1rem;
 }
 

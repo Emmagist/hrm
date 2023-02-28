@@ -5,6 +5,8 @@ import {
     TabContent,
     InboxTabView,
 } from "../../css/MailboxStyles";
+
+import { NoEventView } from "../../css/EventsStyles";
 import MailboxContent from "./MailboxContent";
 
 const InboxTabContent = () => {
@@ -19,7 +21,7 @@ const InboxTabContent = () => {
 };
 
 const SentTabContent = () => {
-    return <p>This is the Sent tab content</p>;
+    return <NoEventView>There are currently no sent messages </NoEventView>;
 };
 
 const MailBox = () => {

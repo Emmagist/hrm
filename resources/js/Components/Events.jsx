@@ -99,7 +99,7 @@ const EventComponent = () => {
     return (
         <EventsView>
             <div className="events_header">
-                <h5>Events</h5>
+                <h4>Events</h4>
                 <button onClick={handleOpen}>Create New</button>
             </div>
             <div className="events_header">

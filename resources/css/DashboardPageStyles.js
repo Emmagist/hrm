@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const DashboardPageView = styled.div`
     display: flex;
+
+    @media screen and (max-width: 884px) {
+        flex-direction: column;
+        width: 100%;
+    }
 `;
 
 // DASHBOARD COMPONENT STYLING
@@ -9,10 +14,14 @@ export const DashboardPageView = styled.div`
 export const DashboardView = styled.main`
     width: 80%;
     overflow: scroll;
-    height: calc(100vh - 2rem);
+    height: calc(100vh - 1rem);
 
     &::-webkit-scrollbar {
         display: none;
+    }
+
+    @media screen and (max-width: 884px) {
+        width: 100%;
     }
 `;
 
@@ -30,6 +39,21 @@ export const DashboardNavView = styled.nav`
 
     &::-webkit-scrollbar {
         display: none;
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        padding: 1.5rem;
+        position: static;
+        box-shadow: none;
+        margin-bottom: 1rem;
+        z-index: 0;
+    }
+
+    @media screen and (max-width: 884px) {
+        position: static;
+        box-shadow: none;
+        margin-bottom: 1rem;
+        z-index: 0;
     }
 `;
 
@@ -50,6 +74,14 @@ export const DashboardInputView = styled.div`
         color: #a0aec0;
         font-weight: 500;
         font-size: 14px;
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            font-size: 13px;
+        }
+
+        @media screen and (max-width: 884px) {
+            width: 100%;
+        }
     }
 
     .uil-search {
@@ -57,6 +89,10 @@ export const DashboardInputView = styled.div`
         right: 20px;
         cursor: pointer;
         color: #a0aec0;
+
+        @media (min-width: 320px) and (max-width: 767px) {
+            font-size: 14px;
+        }
     }
 `;
 
@@ -70,7 +106,6 @@ export const DashboardEmployeesView = styled.div`
     background-color: var(--blue-color);
 
     .dashboard_employees {
-        border: 2px solid red;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -182,7 +217,7 @@ export const DashboardEventView = styled.article`
     align-content: center;
 
     .application_content {
-        margin: 2rem;
+        flex: 1;
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
@@ -191,26 +226,27 @@ export const DashboardEventView = styled.article`
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: white;
         border-radius: 5px;
-        max-height: 335px;
-        width: 50%;
+        height: 330px;
 
         h4 {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
     }
 
     .event_content {
+        flex: 1;
         padding: 1.5rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: white;
         border-radius: 5px;
-        width: 49%;
-        height: 335px;
+        /* width: 49%; */
+        height: 330px;
         display: flex;
         align-items: flex-start;
     }
 
     .mailbox_content {
+        flex: 1;
         h4 {
             margin-bottom: 1rem;
         }
@@ -220,6 +256,25 @@ export const DashboardEventView = styled.article`
         background-color: white;
         border-radius: 5px;
         overflow-y: hidden;
-        width: 49%;
+        height: 330px;
+        /* width: 49%; */
+    }
+`;
+
+export const MobileNavbar = styled.nav`
+    display: none;
+
+    @media screen and (max-width: 884px) {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        box-shadow: 0px 5px 20px 0px #0000000a;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 150;
+        background-color: white;
     }
 `;

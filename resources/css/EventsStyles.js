@@ -18,8 +18,12 @@ export const EventsView = styled.article`
         align-items: center;
         justify-content: space-between;
 
+        span {
+            font-size: 12px;
+        }
+
         button {
-            border: 2px solid var(--blue-color);
+            border: 1px solid var(--blue-color);
             padding: 10px 15px;
             border-radius: 10px;
             background-color: white;
@@ -61,10 +65,12 @@ export const ModalView = styled.div`
     .modal_textfield {
         position: relative;
         .input-field {
-            border: 2px solid #a0aec0 !important;
+            border: 1px solid #a0aec0 !important;
             outline: none !important;
             width: 100%;
-            padding: 15px;
+            font-size: 10px;
+            background-color: transparent;
+            padding: 10px 15px;
             border-radius: 5px !important;
         }
 
@@ -72,8 +78,9 @@ export const ModalView = styled.div`
             position: absolute;
             border: none !important;
             right: 5px;
-            top: 15px;
+            top: 9px;
             outline: none;
+            font-size: 12px;
         }
     }
     .modal_header {
@@ -83,7 +90,7 @@ export const ModalView = styled.div`
         margin-bottom: 1rem;
 
         .closeView {
-            border: 2px solid #a0aec0;
+            border: 1px solid #a0aec0;
             padding: 1px 2px;
             cursor: pointer;
             font-size: 12px;
@@ -99,13 +106,19 @@ export const TimeView = styled.div`
     justify-content: space-around;
 
     .uil-clock {
-        font-size: 20px;
+        font-size: 12px;
+    }
+
+    span {
+        font-size: 12px;
     }
 
     input {
         border: none;
-        border-bottom: 2px solid #a0aec0;
+        font-size: 10px;
+        border-bottom: 1px solid #a0aec0;
         padding: 10px 15px;
+        outline: none;
     }
 `;
 

@@ -10,6 +10,10 @@ export const SideBarView = styled.div`
     top: 0;
     left: 0;
 
+    @media screen and (max-width: 884px) {
+        display: none !important;
+    }
+
     &::-webkit-scrollbar {
         display: none;
     }
