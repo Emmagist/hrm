@@ -59,6 +59,10 @@ export const ModalView = styled.div`
             cursor: pointer;
             border: none;
             color: white;
+
+            @media (min-width: 320px) and (max-width: 767px) {
+                padding: 10px 50px;
+            }
         }
     }
 
@@ -132,6 +136,30 @@ export const TimeView = styled.div`
 `;
 
 export const EventListView = styled.div`
+    max-height: 200px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--blue-color) transparent;
+
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--blue-color);
+        border-radius: 10px;
+        margin-right: 5px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        max-height: 5px;
+        display: none;
+    }
+
+    &:hover::-webkit-scrollbar {
+        display: block;
+    }
     .event_listContent {
         margin-bottom: 15px;
         display: flex;

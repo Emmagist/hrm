@@ -7,6 +7,43 @@ export const DashboardPageView = styled.div`
         flex-direction: column;
         width: 100%;
     }
+
+    .mobileNavbar {
+        z-index: 999;
+        position: fixed;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        background-color: #e5e5e5;
+        top: 0;
+        padding: 1.6em;
+        color: black !important;
+        transition: transform 0.3s ease-in-out;
+
+        @media (min-width: 320px) and (max-width: 768px) {
+            padding: 1em;
+        }
+
+        .mobile_close_header {
+            width: 38%;
+            cursor: pointer;
+            font-size: 30px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            color: var(--blue-color);
+            transition: color 0.3s ease-in-out;
+
+            @media (min-width: 320px) and (max-width: 768px) {
+                width: 78%;
+            }
+
+            &:hover {
+                color: #a0aec0;
+            }
+        }
+    }
 `;
 
 // DASHBOARD COMPONENT STYLING
@@ -244,6 +281,7 @@ export const DashboardGraphView = styled.div`
 
     @media (min-width: 320px) and (max-width: 767px) {
         flex-direction: column;
+        margin: 2rem 1rem;
     }
 
     h4 {
@@ -273,6 +311,7 @@ export const DashboardEventView = styled.article`
 
     @media (min-width: 320px) and (max-width: 767px) {
         flex-direction: column;
+        margin: 2rem 1rem;
     }
 
     .application_content {
@@ -286,6 +325,30 @@ export const DashboardEventView = styled.article`
         background-color: white;
         border-radius: 5px;
         height: 330px;
+        /* max-height: 200px; */
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: var(--blue-color) transparent;
+
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--blue-color);
+            border-radius: 10px;
+            margin-right: 5px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            max-height: 5px;
+            display: none;
+        }
+
+        &:hover::-webkit-scrollbar {
+            display: block;
+        }
 
         h4 {
             margin-bottom: 1.5rem;
