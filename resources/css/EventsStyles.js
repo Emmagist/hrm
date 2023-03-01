@@ -82,6 +82,15 @@ export const ModalView = styled.div`
             outline: none;
             font-size: 12px;
         }
+
+        .color-preview {
+            position: absolute;
+            right: 20px;
+            width: 1rem;
+            height: 1rem;
+            top: 9px;
+            border-radius: 50%;
+        }
     }
     .modal_header {
         display: flex;

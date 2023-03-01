@@ -9,10 +9,10 @@ import {
 } from "../../css/EventsStyles";
 
 const COLORS = [
-    { value: "blue", label: "#4c6fff" },
-    { value: "orange", label: "#ffb74c" },
-    { value: "purple", label: "#d04cff" },
-    { value: "pink", label: "#ff4ca2" },
+    { value: "#4c6fff", label: "#4c6fff" },
+    { value: "#ffb74c", label: "#ffb74c" },
+    { value: "#d04cff", label: "#d04cff" },
+    { value: "#ff4ca2", label: "#ff4ca2" },
 ];
 
 const initialEventState = {
@@ -41,11 +41,7 @@ function Option({ value, label }) {
         padding: "100px",
     };
 
-    return (
-        <option value={value} style={optionStyle}>
-            {label}
-        </option>
-    );
+    return <option value={value} style={optionStyle}></option>;
 }
 
 const EventComponent = () => {
@@ -129,21 +125,31 @@ const EventComponent = () => {
                                 className="input-field"
                                 required
                             />
-                            <select
-                                name="color"
-                                value={event.color}
-                                onChange={handleSelectChange}
-                                required
-                                className="select-field"
-                            >
-                                {COLORS.map(({ value }) => (
-                                    <Option
-                                        key={value}
-                                        value={value}
-                                        label={value}
-                                    />
-                                ))}
-                            </select>
+                            <div>
+                                <select
+                                    name="color"
+                                    value={event.color}
+                                    onChange={handleSelectChange}
+                                    required
+                                    className="select-field"
+                                >
+                                    {COLORS.map(({ value }) => (
+                                        <Option
+                                            key={value}
+                                            value={value}
+                                            label={value}
+                                        />
+                                    ))}
+                                </select>
+                                {event && (
+                                    <div
+                                        className="color-preview"
+                                        style={{
+                                            backgroundColor: event.color,
+                                        }}
+                                    ></div>
+                                )}
+                            </div>
                         </div>
                         <TimeView>
                             <i className="uil uil-clock"></i>
