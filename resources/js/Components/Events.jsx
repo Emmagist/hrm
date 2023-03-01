@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import moment from "moment";
+import toast from "react-hot-toast";
 import {
     EventsView,
     ModalView,
@@ -19,7 +20,7 @@ const initialEventState = {
     name: "",
     startTime: moment().format("hh:mm A"),
     endTime: moment().format("hh:mm A"),
-    color: "blue",
+    color: "#4c6fff",
 };
 
 function getTimeLabel(time) {
@@ -80,10 +81,12 @@ const EventComponent = () => {
     };
 
     const handleSave = () => {
-        if (!event.name) {
-            alert("Please fill out all required fields.");
-            return;
-        }
+     const { name, startTime, endTime } = event;
+
+     if (!event.name || !event.startTime || !event.endTime) {
+         toast.error("Please fill out all required fields.");
+         return;
+     }
 
         // add the new event to the list of events
         setEvents((prevEvents) => [...prevEvents, event]);

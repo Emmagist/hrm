@@ -85,7 +85,7 @@ export const ModalView = styled.div`
 
         .color-preview {
             position: absolute;
-            right: 20px;
+            right: 22px;
             width: 1rem;
             height: 1rem;
             top: 9px;

@@ -31,6 +31,7 @@
         "babel-plugin-macros": "^3.1.0",
         "moment": "^2.29.4",
         "react-apexcharts": "^1.4.0",
+        "react-hot-toast": "^2.4.0",
         "recharts": "^2.4.3",
         "styled-components": "^5.3.6"
     }
