@@ -80,20 +80,36 @@ const EventComponent = () => {
         }));
     };
 
-    const handleSave = () => {
-     const { name, startTime, endTime } = event;
+const handleSave = () => {
+    const { name, startTime, endTime } = event;
 
-     if (!event.name || !event.startTime || !event.endTime) {
-         toast.error("Please fill out all required fields.");
-         return;
-     }
+    if (!name) {
+        toast.error("Please enter a name for the event.");
+        return;
+    }
 
-        // add the new event to the list of events
-        setEvents((prevEvents) => [...prevEvents, event]);
+    if (!startTime || !endTime) {
+        toast.error("Please enter a start and end time for the event.");
+        return;
+    }
 
-        setEvent(initialEventState);
-        setOpen(!open);
-    };
+    if (!isValidDate(startTime) || !isValidDate(endTime)) {
+        toast.error("Please enter valid start and end times for the event.");
+        return;
+    }
+
+    // add the new event to the list of events
+    setEvents((prevEvents) => [...prevEvents, event]);
+
+    setEvent(initialEventState);
+    setOpen(!open);
+};
+
+function isValidDate(dateString) {
+    const d = new Date(`1970-01-01T${dateString}:00`);
+    return !isNaN(d.getTime());
+}
+
 
     return (
         <EventsView>
