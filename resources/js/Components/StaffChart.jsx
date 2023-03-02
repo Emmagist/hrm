@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
+
 const ApexChart = () => {
     const [chartData, setChartData] = useState({
         series: [
@@ -48,6 +49,16 @@ const ApexChart = () => {
                 position: "top",
                 horizontalAlign: "left",
             },
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        legend: {
+                            offsetY: 20,
+                        },
+                    },
+                },
+            ],
         },
     });
 

@@ -49,6 +49,16 @@ const AttendanceChart = () => {
                 position: "top",
                 horizontalAlign: "left",
             },
+            responsive: [
+                {
+                    breakpoint: 480,
+                    options: {
+                        legend: {
+                            offsetY: 20,
+                        },
+                    },
+                },
+            ],
         },
     });
 
