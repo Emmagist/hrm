@@ -49,8 +49,10 @@ const SideBar = () => {
                         }`}
                         onClick={() => handleListItemClick(3)}
                     >
-                        <i class="uil uil-comment"></i> <span>Messages</span>{" "}
-                        <span>8</span>
+                        <Link to="/message" className="nav__link">
+                            <i class="uil uil-comment"></i>{" "}
+                            <span>Messages</span> <span>8</span>
+                        </Link>
                     </li>
                     <li
                         onClick={() => handleListItemClick(4)}

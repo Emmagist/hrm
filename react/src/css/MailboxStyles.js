@@ -103,7 +103,7 @@ export const MailboxContentView = styled.article`
 `;
 
 export const InboxTabView = styled.div`
-    max-height: 200px;
+    /* max-height: 200px; */
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: var(--blue-color) transparent;

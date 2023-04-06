@@ -4,6 +4,7 @@ import DashboardPage from "./Pages/DashboardPage";
 import TaskPage from "./Pages/TaskPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+import MessagePage from "./Pages/MessagePage";
 
 export default function App() {
     return (
@@ -13,6 +14,7 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<DashboardPage />} />
                     <Route path="/task" element={<TaskPage />} />
+                    <Route path="/message" element={<MessagePage />} />
                 </Routes>
             </Router>
         </div>

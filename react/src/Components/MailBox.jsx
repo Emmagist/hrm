@@ -11,6 +11,10 @@ const InboxTabContent = () => {
             <MailboxContent />
             <MailboxContent />
             <MailboxContent />
+            <MailboxContent />
+            <MailboxContent />
+            <MailboxContent />
+            <MailboxContent />
         </InboxTabView>
     );
 };
