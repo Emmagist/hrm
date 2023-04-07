@@ -101,6 +101,10 @@ export const DashboardInputView = styled.div`
     justify-content: flex-end;
     position: relative;
 
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+
     input {
         width: 80%;
         border: none;
@@ -111,6 +115,10 @@ export const DashboardInputView = styled.div`
         color: #a0aec0;
         font-weight: 500;
         font-size: 14px;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
 
         @media (min-width: 320px) and (max-width: 767px) {
             font-size: 13px;

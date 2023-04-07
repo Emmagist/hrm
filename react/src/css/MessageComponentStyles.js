@@ -5,6 +5,12 @@ export const MessageComponentView = styled.div`
     background-color: #f7fafc;
     padding: 2rem;
     gap: 2rem;
+
+    @media screen and (max-width: 1115px) {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
 `;
 
 export const MailBoxView = styled.section`
@@ -14,12 +20,24 @@ export const MailBoxView = styled.section`
     height: 79vh;
     width: 40%;
     background-color: white;
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1115px) {
+        display: none !important;
+    }
 `;
 
 export const MailBoxHeaderView = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 
     h4 {
         color: #acb9c8;
@@ -92,6 +110,7 @@ export const ChatDivider = styled.div`
             width: max-content;
             font-size: 13px;
             padding: 0 4px;
+            text-align: center;
         }
     }
 
@@ -231,6 +250,10 @@ export const ChatTyping = styled.div`
 
 export const ChatBoxView = styled.section`
     width: 60%;
+
+    @media screen and (max-width: 1115px) {
+        width: 100%;
+    }
 `;
 
 export const ChatComponentView = styled.div`

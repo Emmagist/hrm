@@ -31,11 +31,17 @@ export const TaskHeaderView = styled.nav`
     }
 
     @media (min-width: 320px) and (max-width: 767px) {
-        padding: 1.5rem;
         position: static;
         box-shadow: none;
         margin-bottom: 1rem;
         z-index: 0;
+        padding: 0.5rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
     }
 
     @media screen and (max-width: 884px) {
